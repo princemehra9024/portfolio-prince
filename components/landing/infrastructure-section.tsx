@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 const regions = [
   { name: "Web Development", nodes: 50, status: "completed" },
@@ -34,7 +35,7 @@ export function InfrastructureSection() {
   }, []);
 
   return (
-    <section id="infra" ref={sectionRef} className="relative py-32 lg:py-40 overflow-hidden">
+    <section id="infra" ref={sectionRef} className="relative py-12 lg:py-20 overflow-hidden">
         {/* Background accent — retiré, remplacé par l'image sphère */}
       
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -69,11 +70,15 @@ export function InfrastructureSection() {
                 <span className="text-muted-foreground">results.</span>
               </h2>
 
-              <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg transition-all duration-1000 delay-100 ${
+              <p className={`mt-6 text-xl text-muted-foreground leading-relaxed max-w-lg transition-all duration-1000 delay-100 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}>
-                3+ years of delivering quality work to clients worldwide.
-                Currently pursuing IMCA while building amazing projects.
+                3+ years of delivering quality work — leading{" "}
+                <span style={{ color: "#ff008c", fontWeight: 700 }}>Executive Plans</span>{" "}
+                with full{" "}
+                <span style={{ color: "#ff4fd8", fontWeight: 700 }}>dedication</span>{" "}
+                and building real{" "}
+                <span style={{ color: "#ff66ff", fontWeight: 700 }}>impact</span>.
               </p>
             </div>
           </div>
@@ -85,6 +90,18 @@ export function InfrastructureSection() {
           <div className={`lg:col-span-2 relative p-8 lg:p-12 border border-foreground/10 bg-foreground/[0.02] overflow-hidden transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
+            {/* Butterfly sitting exactly on the corner tip */}
+            <div className="absolute top-0 left-0 w-11 h-11 pointer-events-none z-20">
+              <img
+                src="/images/fly.png"
+                alt="Butterfly"
+                className="w-full h-full object-contain"
+                style={{
+                  filter: "drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.45))",
+                }}
+              />
+            </div>
+
             {/* Animated dots background with connecting lines */}
             <div className="absolute inset-0 opacity-70">
               {/* SVG for connecting lines */}
@@ -101,7 +118,7 @@ export function InfrastructureSection() {
                       100% { stroke-dashoffset: 0; opacity: 0; }
                     }
                     .connecting-line {
-                      stroke: #eca8d6;
+                      stroke: #ff4fd8;
                       stroke-width: 1.2;
                       fill: none;
                       stroke-dasharray: 1000;
@@ -132,7 +149,7 @@ export function InfrastructureSection() {
               {[...Array(20)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-1.5 h-1.5 rounded-full bg-[#eca8d6]"
+                  className="absolute w-1.5 h-1.5 rounded-full bg-[#ff008c]"
                   style={{
                     left: `${10 + (i % 5) * 20}%`,
                     top: `${10 + Math.floor(i / 5) * 25}%`,
@@ -142,6 +159,23 @@ export function InfrastructureSection() {
               ))}
             </div>
             
+            {/* Tulips image — pinned to right side inside the card */}
+            <div
+              className="absolute pointer-events-none select-none right-0 bottom-0 w-[320px] md:w-[440px] lg:w-[540px] h-[100%] md:h-[115%] opacity-95 z-0"
+              style={{ right: "-20px", bottom: "-10px" }}
+            >
+              <Image
+                src="/images/tulips.png"
+                alt="Pink Tulips"
+                fill
+                className="object-contain"
+                style={{
+                  objectPosition: "bottom right",
+                  filter: "drop-shadow(0 0 40px rgba(255, 110, 180, 0.55)) brightness(1.1)",
+                }}
+              />
+            </div>
+
             <div className="relative z-10">
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-8xl lg:text-[10rem] font-display leading-none">3+</span>
@@ -155,18 +189,66 @@ export function InfrastructureSection() {
 
           {/* Stacked stat cards */}
           <div className="flex flex-col gap-6">
-            <div className={`p-8 border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-100 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}>
-              <span className="text-5xl lg:text-6xl font-display">100%</span>
-              <span className="block text-sm text-muted-foreground mt-2">Client satisfaction</span>
+
+            {/* 100% card with sakura tree in bottom-right corner */}
+            <div
+              className={`relative border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-100 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ overflow: "hidden", minHeight: "180px" }}
+            >
+              {/* Sakura tree — pinned to bottom-right corner inside the card */}
+              <div
+                className="absolute pointer-events-none"
+                style={{ bottom: 0, right: 0, width: "230px", height: "200px" }}
+              >
+                <Image
+                  src="/images/sakura-nobg.png"
+                  alt="Sakura tree"
+                  fill
+                  className="object-contain object-bottom"
+                  style={{
+                    filter: "drop-shadow(0 0 16px #ff008cbb)",
+                    objectPosition: "bottom right",
+                  }}
+                />
+              </div>
+
+              {/* Text content top-left */}
+              <div className="relative z-10 p-8">
+                <span className="text-5xl lg:text-6xl font-display">100%</span>
+                <span className="block text-sm text-muted-foreground mt-2">Client satisfaction</span>
+              </div>
             </div>
             
-            <div className={`p-8 border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-200 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}>
-              <span className="text-5xl lg:text-6xl font-display">IMCA</span>
-              <span className="block text-sm text-muted-foreground mt-2">Currently studying</span>
+            <div
+              className={`relative border border-foreground/10 bg-foreground/[0.02] transition-all duration-700 delay-200 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ overflow: "hidden", minHeight: "180px" }}
+            >
+              {/* Tulips Vase image — pinned to bottom-right corner inside the card */}
+              <div
+                className="absolute pointer-events-none"
+                style={{ bottom: "-25px", right: "-15px", width: "320px", height: "250px" }}
+              >
+                <Image
+                  src="/images/tulips-vase.png"
+                  alt="Tulips Vase"
+                  fill
+                  className="object-contain object-bottom"
+                  style={{
+                    filter: "drop-shadow(0 0 28px rgba(255, 110, 180, 0.55)) brightness(1.05)",
+                    objectPosition: "bottom right",
+                  }}
+                />
+              </div>
+
+              {/* Text content top-left */}
+              <div className="relative z-10 p-8">
+                <span className="text-5xl lg:text-6xl font-display">IMCA</span>
+                <span className="block text-sm text-muted-foreground mt-2">Currently studying</span>
+              </div>
             </div>
           </div>
         </div>
@@ -186,7 +268,7 @@ export function InfrastructureSection() {
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className={`w-2 h-2 rounded-full transition-colors ${
-                  activeRegion === index ? "bg-[#eca8d6]" : "bg-foreground/20"
+                  activeRegion === index ? "bg-[#ff008c]" : "bg-foreground/20"
                 }`} />
                 <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
                   {region.status}

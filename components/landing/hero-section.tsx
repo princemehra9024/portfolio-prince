@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { Github, Linkedin, Globe, ArrowDown } from "lucide-react";
 
 const words = ["websites", "apps", "solutions", "experiences"];
 
@@ -62,7 +63,21 @@ function BlurWord({ word, trigger }: { word: string; trigger: number }) {
   }, [trigger]);
 
   // gradient colours cycling across letter positions
-  const gradientColors = ["#eca8d6", "#a78bfa", "#67e8f9", "#fbbf24", "#eca8d6"];
+  // Neon Blossom Pink → Cyber Sakura → Electric Rose → Void Pink → Digital Bloom
+  // → Neon Petal → Obsidian Pink → Afterglow Magenta → Pink Phantom → Synthetic Sakura
+  const gradientColors = [
+    "#ff6eb4", // Neon Blossom Pink
+    "#ff2d87", // Cyber Sakura
+    "#ff0066", // Electric Rose
+    "#c0005a", // Void Pink
+    "#ff85c1", // Digital Bloom
+    "#ff4da6", // Neon Petal
+    "#8b0057", // Obsidian Pink
+    "#ff00aa", // Afterglow Magenta
+    "#e040fb", // Pink Phantom
+    "#ff69b4", // Synthetic Sakura
+    "#ff6eb4", // loop back to Neon Blossom Pink
+  ];
 
   return (
     <>
@@ -174,7 +189,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
             <span className="w-8 h-px bg-white/30" />
-            Web Developer & IMCA Student
+            Agency Owner · Executive Plans
           </span>
         </div>
         
@@ -194,8 +209,62 @@ export function HeroSection() {
           </h1>
         </div>
         </div>
+
+        {/* Social Links Row */}
+        <div
+          className={`flex flex-wrap items-center gap-4 mt-10 transition-all duration-700 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          {[
+            { label: "GitHub", href: "https://github.com/princemehra9024", icon: Github },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/prince-mehra-562681366", icon: Linkedin },
+            { label: "Aryan Heights", href: "https://www.aryanheights.in/", icon: Globe },
+          ].map(({ label, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-all duration-300"
+            >
+              <span
+                className="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300"
+                style={{
+                  border: "1px solid rgba(255,110,180,0.25)",
+                  background: "rgba(255,110,180,0.05)",
+                }}
+                onMouseEnter={(e) => {
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.borderColor = "rgba(255,110,180,0.8)";
+                  el.style.background = "rgba(255,110,180,0.15)";
+                  el.style.boxShadow = "0 0 16px rgba(255,110,180,0.5), 0 0 4px rgba(255,110,180,0.3)";
+                }}
+                onMouseLeave={(e) => {
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.borderColor = "rgba(255,110,180,0.25)";
+                  el.style.background = "rgba(255,110,180,0.05)";
+                  el.style.boxShadow = "none";
+                }}
+              >
+                <Icon className="w-4 h-4" />
+              </span>
+              <span className="hidden sm:inline">{label}</span>
+            </a>
+          ))}
+
+
+        </div>
       </div>
-      
+
+      {/* Scroll indicator */}
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-700 delay-700 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}>
+        <span className="text-xs font-mono text-white/30 tracking-widest uppercase">Scroll</span>
+        <ArrowDown className="w-4 h-4 text-white/30 animate-bounce" />
+      </div>
+
       {/* Stats — 3 metrics static, no auto-scroll */}
       <div 
         className={`absolute bottom-12 left-0 right-0 px-6 lg:px-12 transition-all duration-700 delay-500 ${
@@ -204,9 +273,9 @@ export function HeroSection() {
       >
         <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">
           {[
-            { value: "3+", label: "years freelancing" },
+            { value: "3+", label: "years of excellence" },
             { value: "50+", label: "websites delivered" },
-            { value: "4+", label: "apps developed" },
+            { value: "100%", label: "client satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col gap-2">
               <span className="text-3xl lg:text-4xl font-display text-white">{stat.value}</span>

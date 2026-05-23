@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Globe } from "lucide-react";
 
 const navLinks = [
   { name: "Skills",        href: "#features"      },
@@ -64,6 +64,24 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
+            <a
+              href="https://github.com/princemehra9024"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className={`transition-all duration-300 hover:scale-110 ${isScrolled ? "text-foreground/60 hover:text-foreground" : "text-white/60 hover:text-white"}`}
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prince-mehra-562681366"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className={`transition-all duration-300 hover:scale-110 ${isScrolled ? "text-foreground/60 hover:text-foreground" : "text-white/60 hover:text-white"}`}
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
             <a href="mailto:princemehra9024@gmail.com" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
               Contact
             </a>
@@ -120,6 +138,21 @@ export function Navigation() {
             ))}
           </div>
           
+          {/* Social Links */}
+          <div className={`flex gap-6 pb-6 transition-all duration-500 ${
+            isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`} style={{ transitionDelay: isMobileMenuOpen ? "250ms" : "0ms" }}>
+            <a href="https://github.com/princemehra9024" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
+              <Github className="w-5 h-5" /><span className="text-sm">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/prince-mehra-562681366" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
+              <Linkedin className="w-5 h-5" /><span className="text-sm">LinkedIn</span>
+            </a>
+            <a href="https://wwwwards.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
+              <Globe className="w-5 h-5" /><span className="text-sm">Wwwwards</span>
+            </a>
+          </div>
+
           {/* Bottom CTAs */}
           <div className={`flex gap-4 pt-8 border-t border-foreground/10 transition-all duration-500 ${
             isMobileMenuOpen 

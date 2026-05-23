@@ -4,39 +4,46 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.06 0.008 260);
-  --foreground: oklch(0.94 0.005 90);
-  --card: oklch(0.09 0.008 260);
-  --card-foreground: oklch(0.94 0.005 90);
-  --popover: oklch(0.09 0.008 260);
-  --popover-foreground: oklch(0.94 0.005 90);
-  --primary: oklch(0.94 0.005 90);
-  --primary-foreground: oklch(0.06 0.008 260);
-  --secondary: oklch(0.12 0.008 260);
-  --secondary-foreground: oklch(0.94 0.005 90);
-  --muted: oklch(0.12 0.008 260);
-  --muted-foreground: oklch(0.55 0.015 90);
-  --accent: oklch(0.14 0.01 260);
-  --accent-foreground: oklch(0.94 0.005 90);
+  /* ============================================================
+     COLOR THEME: Pure Black + Hot Pink/Magenta
+     Inspired by: deep black bg, glowing pink/magenta petals
+     NO BLUE — hue 350 (warm pink-black) for all neutrals
+     Primary accent palette: #ff0080 → #ff6eb4 → #e040fb
+  ============================================================ */
+
+  --background: oklch(0.04 0.005 350);          /* near-pure black, hint of warm */
+  --foreground: oklch(0.96 0.004 350);           /* near-white, warm */
+  --card: oklch(0.07 0.006 350);                 /* dark card */
+  --card-foreground: oklch(0.96 0.004 350);
+  --popover: oklch(0.07 0.006 350);
+  --popover-foreground: oklch(0.96 0.004 350);
+  --primary: oklch(0.96 0.004 350);
+  --primary-foreground: oklch(0.04 0.005 350);
+  --secondary: oklch(0.11 0.006 350);            /* slightly lighter black */
+  --secondary-foreground: oklch(0.96 0.004 350);
+  --muted: oklch(0.11 0.006 350);
+  --muted-foreground: oklch(0.52 0.01 350);      /* warm gray */
+  --accent: oklch(0.13 0.008 350);
+  --accent-foreground: oklch(0.96 0.004 350);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.94 0.005 90);
-  --border: oklch(0.18 0.008 260);
-  --input: oklch(0.14 0.008 260);
-  --ring: oklch(0.94 0.005 90);
-  --chart-1: oklch(0.94 0.005 90);
-  --chart-2: oklch(0.72 0.01 90);
-  --chart-3: oklch(0.52 0.015 90);
-  --chart-4: oklch(0.35 0.01 90);
-  --chart-5: oklch(0.20 0.008 90);
+  --destructive-foreground: oklch(0.96 0.004 350);
+  --border: oklch(0.17 0.007 350);               /* subtle warm-black border */
+  --input: oklch(0.13 0.007 350);
+  --ring: oklch(0.96 0.004 350);
+  --chart-1: oklch(0.96 0.004 350);
+  --chart-2: oklch(0.72 0.01 350);
+  --chart-3: oklch(0.52 0.015 350);
+  --chart-4: oklch(0.35 0.01 350);
+  --chart-5: oklch(0.20 0.008 350);
   --radius: 0.25rem;
-  --sidebar: oklch(0.06 0.008 260);
-  --sidebar-foreground: oklch(0.94 0.005 90);
-  --sidebar-primary: oklch(0.94 0.005 90);
-  --sidebar-primary-foreground: oklch(0.06 0.008 260);
-  --sidebar-accent: oklch(0.12 0.008 260);
-  --sidebar-accent-foreground: oklch(0.94 0.005 90);
-  --sidebar-border: oklch(0.18 0.008 260);
-  --sidebar-ring: oklch(0.55 0.015 90);
+  --sidebar: oklch(0.04 0.005 350);
+  --sidebar-foreground: oklch(0.96 0.004 350);
+  --sidebar-primary: oklch(0.96 0.004 350);
+  --sidebar-primary-foreground: oklch(0.04 0.005 350);
+  --sidebar-accent: oklch(0.11 0.006 350);
+  --sidebar-accent-foreground: oklch(0.96 0.004 350);
+  --sidebar-border: oklch(0.17 0.007 350);
+  --sidebar-ring: oklch(0.52 0.01 350);
 }
 
 @theme inline {
@@ -179,17 +186,17 @@
   }
   
   .how-it-works-bg {
-    background-color: oklch(0.10 0.008 260);
+    background-color: oklch(0.07 0.006 350);
   }
 
   .word-gradient {
     background: linear-gradient(
       45deg,
-      #eca8d6 0%,
-      #a78bfa 25%,
-      #67e8f9 50%,
-      #fbbf24 75%,
-      #eca8d6 100%
+      #ff008c 0%,
+      #ff66ff 25%,
+      #ff4fd8 50%,
+      #e040fb 75%,
+      #ff008c 100%
     );
     background-size: 300% 300%;
     background-clip: text;
@@ -202,5 +209,75 @@
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+  }
+
+  /* Glow pulse — for badges, active indicators */
+  .animate-pulse {
+    animation: glow-pulse 2.5s ease-in-out infinite;
+  }
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(255,110,180,0.4), 0 0 24px rgba(255,110,180,0.15); }
+    50%       { box-shadow: 0 0 20px rgba(255,110,180,0.7), 0 0 60px rgba(255,110,180,0.25); }
+  }
+
+  /* Float — subtle up/down for hero decorative elements */
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+  }
+
+  /* Shimmer — for card highlights */
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2.2s infinite;
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Gradient border spin */
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #ff008c, #ff4fd8, #ff66ff, #ff008c);
+    background-size: 300% 300%;
+    animation: gradient-shift 3s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Neon text glow */
+  .text-glow-blue,
+  .text-glow-pink {
+    text-shadow: 0 0 20px rgba(255,0,140,0.6), 0 0 60px rgba(255,0,140,0.25), 0 0 120px rgba(255,79,216,0.15);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff008c, #ff4fd8);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff4fd8, #ff66ff);
   }
 }

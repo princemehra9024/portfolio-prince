@@ -239,7 +239,7 @@ export function MetricsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-40 overflow-hidden">
+    <section ref={sectionRef} className="relative pt-16 lg:pt-24 pb-8 lg:pb-12 overflow-hidden">
       <GridBackground />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -247,8 +247,8 @@ export function MetricsSection() {
         <div className="grid lg:grid-cols-12 gap-8 mb-20 lg:mb-32">
           <div className="lg:col-span-8 lg:col-start-1">
             <div className="flex items-center gap-4 mb-6">
-              <span className="flex items-center gap-2 px-3 py-1 bg-[#eca8d6]/10 text-[#eca8d6] text-xs font-mono">
-                <span className="w-2 h-2 rounded-full bg-[#eca8d6] animate-pulse" />
+              <span className="flex items-center gap-2 px-3 py-1 bg-[#ff008c]/10 text-[#ff008c] text-xs font-mono">
+                <span className="w-2 h-2 rounded-full bg-[#ff008c] animate-pulse" />
                 LIVE
               </span>
               <span className="text-sm font-mono text-muted-foreground">

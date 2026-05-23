@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Globe } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const footerLinks = {
@@ -8,6 +8,7 @@ const footerLinks = {
     { name: "Web Development", href: "#features" },
     { name: "App Development", href: "#features" },
     { name: "UI/UX Design", href: "#features" },
+    { name: "Consulting", href: "#features" },
   ],
   About: [
     { name: "Background", href: "#developers" },
@@ -18,15 +19,16 @@ const footerLinks = {
   Contact: [
     { name: "princemehra9024@gmail.com", href: "mailto:princemehra9024@gmail.com" },
     { name: "+91 9024546041", href: "tel:+919024546041" },
-    { name: "LinkedIn", href: "#" },
-    { name: "GitHub", href: "#" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/prince-mehra-562681366" },
+    { name: "GitHub", href: "https://github.com/princemehra9024" },
   ],
 };
 
 const socialLinks = [
-  { name: "Email", href: "mailto:princemehra9024@gmail.com" },
-  { name: "Phone", href: "tel:+919024546041" },
-  { name: "LinkedIn", href: "#" },
+  { name: "Email", href: "mailto:princemehra9024@gmail.com", icon: "email" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/prince-mehra-562681366", icon: "linkedin" },
+  { name: "GitHub", href: "https://github.com/princemehra9024", icon: "github" },
+  { name: "Wwwwards", href: "https://wwwwards.com", icon: "globe" },
 ];
 
 function AnimatedWaveCanvas() {
@@ -55,7 +57,7 @@ function AnimatedWaveCanvas() {
       const height = canvas.offsetHeight;
       ctx.clearRect(0, 0, width, height);
 
-      ctx.strokeStyle = "rgba(100, 200, 150, 0.3)";
+      ctx.strokeStyle = "rgba(255, 0, 140, 0.3)";
       ctx.lineWidth = 1;
 
       for (let wave = 0; wave < 3; wave++) {
@@ -89,7 +91,7 @@ export function FooterSection() {
   return (
     <footer className="relative bg-black">
       {/* Panoramic banner image */}
-      <div className="relative w-full h-[340px] md:h-[420px] overflow-hidden">
+      <div className="relative w-full h-[280px] md:h-[360px] overflow-hidden">
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png"
           alt="Bioluminescent landscape"
@@ -103,34 +105,83 @@ export function FooterSection() {
 
       {/* Footer content — black background, white text */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
+        {/* Live Projects Banner */}
+        <div className="pt-10 pb-8 border-b border-white/10">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Featured Live Work</span>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://www.aryanheights.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-sm text-white/60 hover:text-white hover:border-white/50 transition-all duration-300 group"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#ff6eb4] animate-pulse" />
+                Aryan Heights
+                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <a
+                href="https://www.shreekalyaanhospital.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-sm text-white/60 hover:text-white hover:border-white/50 transition-all duration-300 group"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#ff6eb4] animate-pulse" />
+                Shree Kalyaan Hospital
+                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <a
+                href="https://github.com/princemehra9024"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-mono transition-all duration-300"
+                style={{ borderColor: "rgba(255,110,180,0.4)", background: "rgba(255,110,180,0.06)", color: "#ff6eb4" }}
+              >
+                <Github className="w-3.5 h-3.5" />
+                View GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Main Footer */}
-        <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
+        <div className="py-12 lg:py-16">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-10 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display text-white">Prince Mehra</span>
+              <a href="#" className="inline-flex items-center gap-2 mb-4">
+                <span className="text-2xl font-display text-white">Executive Plans</span>
               </a>
+              <p className="text-xs font-mono mb-1" style={{ color: "#ff6eb4" }}>by Prince Mehra</p>
 
-              <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                Web Developer | IMCA Student | 3+ Years Freelancing
+              <p className="text-white/50 leading-relaxed mb-6 max-w-xs text-sm mt-3">
+                Agency Owner with strong{" "}
+                <span style={{ color: "#ff6eb4", fontWeight: 600 }}>leadership</span>,{" "}
+                <span style={{ color: "#ff85c1", fontWeight: 600 }}>bonding</span> &amp;{" "}
+                <span style={{ color: "#e040fb", fontWeight: 600 }}>communication</span> skills.
+                Building real impact for clients worldwide.
               </p>
 
-              <div className="text-sm text-white/40 mb-6 space-y-1">
+              <div className="text-sm text-white/40 mb-5 space-y-1">
                 <p>princemehra9024@gmail.com</p>
                 <p>+91 9024546041</p>
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-6">
+              <div className="flex gap-3">
                 {socialLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-sm text-white/40 hover:text-white transition-colors flex items-center gap-1 group"
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    aria-label={link.name}
+                    className="flex items-center justify-center w-9 h-9 rounded-full border border-white/20 text-white/40 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all duration-300 group"
                   >
-                    {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    {link.icon === "linkedin" && <Linkedin className="w-4 h-4" />}
+                    {link.icon === "github" && <Github className="w-4 h-4" />}
+                    {link.icon === "globe" && <Globe className="w-4 h-4" />}
+                    {link.icon === "email" && <span className="text-xs font-mono">@</span>}
                   </a>
                 ))}
               </div>
@@ -139,8 +190,8 @@ export function FooterSection() {
             {/* Link Columns */}
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
-                <h3 className="text-sm font-medium text-white mb-6">{title}</h3>
-                <ul className="space-y-4">
+                <h3 className="text-sm font-medium text-white mb-5">{title}</h3>
+                <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.name}>
                       <a
@@ -148,11 +199,6 @@ export function FooterSection() {
                         className="text-sm text-white/40 hover:text-white transition-colors inline-flex items-center gap-2"
                       >
                         {link.name}
-                        {"badge" in link && link.badge && (
-                          <span className="text-xs px-2 py-0.5 bg-white text-black rounded-full">
-                            {link.badge}
-                          </span>
-                        )}
                       </a>
                     </li>
                   ))}
@@ -162,11 +208,40 @@ export function FooterSection() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="py-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Bottom Bar with Signature */}
+        <div className="relative py-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Lucky Cat Image sitting on the horizontal line */}
+          <img 
+            src="/images/lucky-cat-transparent.png" 
+            alt="Lucky Cat" 
+            className="absolute bottom-full right-0 md:right-4 w-24 h-24 md:w-32 md:h-32 object-contain translate-y-3 pointer-events-none z-10 drop-shadow-lg"
+          />
+
           <p className="text-sm text-white/30">
-            &copy; 2025 Prince Mehra. All rights reserved.
+            &copy; 2025 Executive Plans. All rights reserved.
           </p>
+
+          {/* Signature */}
+          <div className="flex flex-col items-center md:items-end gap-1">
+            <span
+              className="text-xs font-mono tracking-widest uppercase"
+              style={{ color: "#ff6eb450" }}
+            >
+              Crafted by
+            </span>
+            <span
+              className="font-display text-2xl tracking-wide"
+              style={{
+                background: "linear-gradient(90deg, #ff6eb4, #e040fb, #ff2d87)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Prince Mehra
+            </span>
+          </div>
 
           <div className="flex items-center gap-4 text-sm text-white/30">
             <span className="flex items-center gap-2">

@@ -149,19 +149,19 @@ export function FeaturesSection() {
     <section
       id="features"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-12 lg:py-20 overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header - Full width with diagonal layout */}
-        <div className="relative mb-24 lg:mb-32">
-          <div className="grid lg:grid-cols-12 gap-8 items-end">
+        <div className="relative mb-12 lg:mb-20">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-7">
               <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
                 <span className="w-12 h-px bg-foreground/30" />
                 Capabilities
               </span>
               <h2
-                className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
+                className={`text-6xl md:text-7xl lg:text-[100px] font-display tracking-tight leading-none transition-all duration-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -170,7 +170,7 @@ export function FeaturesSection() {
                 <span className="text-muted-foreground">skills.</span>
               </h2>
             </div>
-            <div className="lg:col-span-5 lg:pb-4">
+            <div className="lg:col-span-5 lg:pb-6">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
