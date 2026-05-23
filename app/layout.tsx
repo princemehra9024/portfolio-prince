@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'COMPUTE - AI Agents for Distributed Computing',
-  description: 'Deploy autonomous AI agents on distributed infrastructure. Offload complex tasks to intelligent workers that run 24/7.',
+  title: 'Prince Mehra - Web Developer & Freelancer',
+  description: 'Web developer with 3+ years of freelance experience. IMCA student specializing in websites and apps. 50+ websites and 4+ apps delivered.',
   generator: 'v0.app',
 }
 

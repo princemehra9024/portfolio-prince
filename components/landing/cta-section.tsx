@@ -50,37 +50,37 @@ export function CtaSection() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left content */}
               <div className="flex-1">
-                <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to delegate
-                  <br />
-                  to AI agents?
-                </h2>
+              <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
+                Ready to start
+                <br />
+                your project?
+              </h2>
 
-                <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Join teams automating complex workflows with COMPUTE agents. 
-                  Deploy your first agent in minutes.
-                </p>
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
+                Let&apos;s discuss your vision and bring it to life. 
+                I&apos;m available for freelance projects and collaborations.
+              </p>
 
-                <div className="flex flex-col sm:flex-row items-start gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
-                  >
-                    Deploy your first agent
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
-                  >
-                    Book a demo
-                  </Button>
-                </div>
+              <div className="flex flex-col sm:flex-row items-start gap-4">
+                <Button
+                  size="lg"
+                  className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                >
+                  Get in Touch
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                >
+                  View My Work
+                </Button>
+              </div>
 
-                <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  1,000 free tasks with COMPUTE
-                </p>
+              <p className="text-sm text-muted-foreground mt-8 font-mono">
+                Usually respond within 24 hours
+              </p>
               </div>
 
               {/* Right image */}

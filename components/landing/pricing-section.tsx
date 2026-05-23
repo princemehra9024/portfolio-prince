@@ -5,50 +5,50 @@ import { ArrowRight, Check, Zap } from "lucide-react";
 
 const plans = [
   {
-    name: "Explorer",
-    description: "For tinkering and small automations",
-    price: { monthly: 0, annual: 0 },
+    name: "Landing Page",
+    description: "Perfect for startups and small businesses",
+    price: { monthly: 299, annual: 249 },
     features: [
-      "3 concurrent agents",
-      "1,000 tasks/month",
-      "Community support",
-      "Basic logging",
-      "Public integrations",
+      "Single page website",
+      "Responsive design",
+      "Contact form integration",
+      "SEO optimization",
+      "1 round of revisions",
     ],
-    cta: "Start free",
+    cta: "Get Started",
     highlight: false,
   },
   {
-    name: "Builder",
-    description: "For teams shipping with agents",
-    price: { monthly: 79, annual: 65 },
+    name: "Business Website",
+    description: "Complete web presence for growing businesses",
+    price: { monthly: 799, annual: 649 },
     features: [
-      "25 concurrent agents",
-      "50,000 tasks/month",
-      "Priority support",
-      "Full audit trails",
-      "Private integrations",
-      "Team workspaces",
-      "Custom agent roles",
+      "Up to 10 pages",
+      "Custom design",
+      "CMS integration",
+      "Blog setup",
+      "Analytics integration",
+      "3 rounds of revisions",
+      "1 month support",
     ],
-    cta: "Start trial",
+    cta: "Most Popular",
     highlight: true,
   },
   {
-    name: "Scale",
-    description: "For agent-first organizations",
+    name: "Custom Project",
+    description: "Complex apps and custom solutions",
     price: { monthly: null, annual: null },
     features: [
-      "Unlimited agents",
-      "Unlimited tasks",
-      "24/7 dedicated support",
-      "On-premise deployment",
-      "SLA guarantee",
-      "Custom LLM routing",
-      "Advanced security",
-      "Dedicated compute",
+      "Web applications",
+      "Mobile apps",
+      "E-commerce solutions",
+      "API development",
+      "Database design",
+      "Ongoing support",
+      "Priority delivery",
+      "Dedicated communication",
     ],
-    cta: "Contact sales",
+    cta: "Contact Me",
     highlight: false,
   },
 ];
@@ -78,14 +78,14 @@ export function PricingSection() {
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-8">
               <span className="w-12 h-px bg-foreground/30" />
-              Pricing
+              Services
             </span>
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-              Pay for
+              Transparent
               <br />
-              <span className="text-stroke">results.</span>
+              <span className="text-stroke">pricing.</span>
             </h2>
           </div>
           
@@ -190,19 +190,19 @@ export function PricingSection() {
           <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#eca8d6]" />
-              Encrypted execution
+              Fast turnaround
             </span>
             <span className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#eca8d6]" />
-              Full audit logs
+              Clear communication
             </span>
             <span className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#eca8d6]" />
-              Multi-model routing
+              Quality guaranteed
             </span>
           </div>
-          <a href="#" className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">
-            Compare all features
+          <a href="mailto:prince@example.com" className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">
+            Discuss your project
           </a>
         </div>
       </div>

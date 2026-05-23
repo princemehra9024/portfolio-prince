@@ -5,32 +5,32 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Our agents handle 80% of our customer support tickets autonomously. The ROI was immediate.",
-    author: "Sarah Chen",
-    role: "CTO",
-    company: "Meridian Labs",
-    metric: { value: "80%", label: "Ticket resolution" },
+    quote: "Prince delivered our website ahead of schedule. His attention to detail and technical skills are exceptional.",
+    author: "Rahul Sharma",
+    role: "Founder",
+    company: "TechStart India",
+    metric: { value: "2x", label: "Faster delivery" },
   },
   {
-    quote: "We deployed research agents that work 24/7. They surface insights we'd never find manually.",
-    author: "Marcus Webb",
-    role: "Head of Research",
-    company: "Flux Systems",
-    metric: { value: "10x", label: "Research output" },
+    quote: "Working with Prince was a great experience. He understood our vision and brought it to life perfectly.",
+    author: "Priya Patel",
+    role: "CEO",
+    company: "Digital Solutions",
+    metric: { value: "100%", label: "Satisfaction" },
   },
   {
-    quote: "The multi-agent orchestration is incredible. Complex workflows that took weeks now run in hours.",
-    author: "Elena Rodriguez",
-    role: "VP Engineering",
-    company: "Beacon AI",
-    metric: { value: "40x", label: "Faster workflows" },
+    quote: "The app Prince built for us has transformed how we do business. Highly recommend his services.",
+    author: "Amit Kumar",
+    role: "Director",
+    company: "InnovateTech",
+    metric: { value: "50%", label: "Efficiency gain" },
   },
   {
-    quote: "Security was our biggest concern. The sandboxing and audit trails gave us full confidence.",
-    author: "James Liu",
-    role: "CISO",
-    company: "Prism Analytics",
-    metric: { value: "0", label: "Security incidents" },
+    quote: "Professional, responsive, and talented. Prince is our go-to developer for all web projects now.",
+    author: "Neha Singh",
+    role: "Marketing Head",
+    company: "GrowthHub",
+    metric: { value: "4", label: "Projects together" },
   },
 ];
 
@@ -99,8 +99,8 @@ export function TestimonialsSection() {
             <h2 className={`text-4xl lg:text-5xl font-display transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}>
-              Trusted by teams
-              <span className="text-background/40"> worldwide.</span>
+              Client
+              <span className="text-background/40"> feedback.</span>
             </h2>
           </div>
           

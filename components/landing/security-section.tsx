@@ -6,31 +6,31 @@ import { Shield, Lock, Eye, FileCheck } from "lucide-react";
 const securityFeatures = [
   {
     icon: Shield,
-    title: "Isolated execution",
-    description: "Each agent runs in its own secure sandbox.",
+    title: "Quality First",
+    description: "Every project built with attention to detail.",
     image: "/images/isolated.jpg",
   },
   {
     icon: Lock,
-    title: "Encrypted memory",
-    description: "Data encrypted at rest and in transit.",
+    title: "Reliable Delivery",
+    description: "On-time delivery you can count on.",
     image: "/images/encrypted.jpg",
   },
   {
     icon: Eye,
-    title: "Full audit trails",
-    description: "Every action logged and inspectable.",
+    title: "Clear Communication",
+    description: "Regular updates throughout the project.",
     image: "/images/audit.jpg",
   },
   {
     icon: FileCheck,
-    title: "Permission boundaries",
-    description: "Principle of least privilege by design.",
+    title: "Fair Pricing",
+    description: "Transparent quotes with no hidden costs.",
     image: "/images/permissions.jpg",
   },
 ];
 
-const certifications = ["SOC 2", "ISO 27001", "HIPAA", "GDPR"];
+const certifications = ["Next.js", "React", "TypeScript", "Tailwind"];
 
 export function SecuritySection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,24 +67,24 @@ export function SecuritySection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <span className="w-12 h-px bg-foreground/20" />
-            Security
+            About Me
           </span>
           
-          {/* Title — full width */}
+          {/* Title  full width */}
           <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] mb-12 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            Autonomous,
+            Why work
             <br />
-            <span className="text-muted-foreground">not uncontrolled.</span>
+            <span className="text-muted-foreground">with me?</span>
           </h2>
           
-          {/* Description — below title */}
+          {/* Description  below title */}
           <div className={`transition-all duration-1000 delay-100 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Your agents are powerful but constrained. Enterprise-grade security ensures they only do what you allow.
+              I combine technical expertise with a passion for creating exceptional digital experiences. Your success is my priority.
             </p>
           </div>
         </div>
@@ -109,10 +109,10 @@ export function SecuritySection() {
             </div>
             
             <div className="relative z-10">
-              <span className="font-mono text-sm text-muted-foreground">Active protection</span>
+              <span className="font-mono text-sm text-muted-foreground">Happy clients</span>
               <div className="mt-8">
-                <span className="text-7xl lg:text-8xl font-display">0</span>
-                <span className="block text-muted-foreground mt-2">Security incidents this year</span>
+                <span className="text-7xl lg:text-8xl font-display">50+</span>
+                <span className="block text-muted-foreground mt-2">Successful projects delivered</span>
               </div>
             </div>
             

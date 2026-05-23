@@ -4,35 +4,34 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const footerLinks = {
-  Product: [
-    { name: "Agent capabilities", href: "#features" },
-    { name: "How it works", href: "#how-it-works" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Integrations", href: "#integrations" },
+  Services: [
+    { name: "Web Development", href: "#features" },
+    { name: "App Development", href: "#features" },
+    { name: "UI/UX Design", href: "#features" },
+    { name: "Consulting", href: "#pricing" },
   ],
-  Developers: [
-    { name: "Documentation", href: "#developers" },
-    { name: "Agent SDK", href: "#" },
-    { name: "API Reference", href: "#developers" },
-    { name: "Status", href: "#" },
+  About: [
+    { name: "Background", href: "#developers" },
+    { name: "Experience", href: "#infra" },
+    { name: "Tech Stack", href: "#integrations" },
+    { name: "Process", href: "#how-it-works" },
   ],
-  Company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#", badge: "Hiring" },
-    { name: "Contact", href: "#" },
+  Connect: [
+    { name: "Email", href: "mailto:prince@example.com" },
+    { name: "LinkedIn", href: "#" },
+    { name: "GitHub", href: "#" },
+    { name: "Twitter", href: "#" },
   ],
   Legal: [
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
-    { name: "Security", href: "#security" },
   ],
 };
 
 const socialLinks = [
-  { name: "Twitter", href: "#" },
-  { name: "GitHub", href: "#" },
   { name: "LinkedIn", href: "#" },
+  { name: "GitHub", href: "#" },
+  { name: "Twitter", href: "#" },
 ];
 
 function AnimatedWaveCanvas() {
@@ -115,12 +114,11 @@ export function FooterSection() {
             {/* Brand Column */}
             <div className="col-span-2">
               <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display text-white">COMPUTE</span>
-                <span className="text-xs text-white/40 font-mono">TM</span>
+                <span className="text-2xl font-display text-white">Prince Mehra</span>
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                Autonomous AI agents for distributed computing. Delegate complex tasks to intelligent workers.
+                Web developer and IMCA student with 3+ years of freelance experience. Building digital solutions that make a difference.
               </p>
 
               {/* Social Links */}
@@ -167,13 +165,13 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="py-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/30">
-            &copy; 2025 COMPUTE. All rights reserved.
+            &copy; 2025 Prince Mehra. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-white/30">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#eca8d6]" />
-              All agents operational
+              Available for projects
             </span>
           </div>
         </div>

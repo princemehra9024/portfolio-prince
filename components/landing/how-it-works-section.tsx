@@ -5,39 +5,42 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Define",
-    subtitle: "your agent",
-    description: "Describe what your agent should do. Set its capabilities, constraints, and goals in natural language or code.",
-    code: `const researcher = new Agent({
-  role: 'Research Analyst',
-  capabilities: ['web', 'docs', 'api'],
-  memory: true,
-  autonomy: 'full'
-})`,
+    title: "Discovery",
+    subtitle: "& planning",
+    description: "We discuss your vision, requirements, and goals. I create a detailed roadmap and timeline for your project.",
+    code: `const project = {
+  client: 'Your Business',
+  goals: ['modern design', 'fast performance'],
+  timeline: 'agreed together',
+  budget: 'transparent pricing'
+}`,
   },
   {
     number: "02",
-    title: "Assign",
-    subtitle: "the task",
-    description: "Give your agent a mission. It breaks down complex tasks into steps and executes them autonomously.",
-    code: `await researcher.execute({
-  task: 'Analyze competitor pricing',
-  sources: ['public-data', 'news'],
-  output: 'structured-report',
-  deadline: '2h'
+    title: "Design",
+    subtitle: "& develop",
+    description: "I design and build your project with modern technologies. You get regular updates and can provide feedback throughout.",
+    code: `// Building your vision
+const website = await develop({
+  design: 'pixel-perfect',
+  code: 'clean & scalable',
+  stack: ['Next.js', 'React', 'Tailwind'],
+  updates: 'regular demos'
 })`,
   },
   {
     number: "03",
-    title: "Monitor",
-    subtitle: "& scale",
-    description: "Track progress in real-time. Spin up more agents as needed. Pay only for compute used.",
-    code: `optimus.dashboard({
-  agents: [researcher],
-  metrics: ['tasks', 'latency', 'cost'],
-  alerts: true
+    title: "Launch",
+    subtitle: "& support",
+    description: "Your project goes live with my support. I ensure everything runs smoothly and provide ongoing maintenance if needed.",
+    code: `// Ready to launch!
+deploy({
+  hosting: 'optimized',
+  seo: 'configured',
+  analytics: 'connected',
+  support: 'ongoing'
 })
-// 847 tasks completed today`,
+// Project delivered!`,
   },
 ];
 
@@ -88,9 +91,9 @@ export function HowItWorksSection() {
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">Define.</span>
-              <span className="block text-white/30">Deploy.</span>
-              <span className="block text-white/10">Scale.</span>
+              <span className="block">Discover.</span>
+              <span className="block text-white/30">Build.</span>
+              <span className="block text-white/10">Launch.</span>
             </h2>
           </div>
 

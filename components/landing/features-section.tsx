@@ -5,27 +5,27 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Autonomous Execution",
-    description: "Deploy AI agents that work independently. They analyze, decide, and execute complex multi-step tasks without human intervention.",
-    stats: { value: "99.7%", label: "task completion" },
+    title: "Web Development",
+    description: "Building responsive, high-performance websites with modern frameworks. From landing pages to complex web applications.",
+    stats: { value: "50+", label: "websites built" },
   },
   {
     number: "02",
-    title: "Distributed Computing",
-    description: "Offload compute-heavy tasks to our global network. Your agents run on optimized infrastructure across 50+ regions worldwide.",
-    stats: { value: "50+", label: "global regions" },
+    title: "App Development",
+    description: "Creating mobile and web applications with seamless user experiences. Cross-platform solutions that work everywhere.",
+    stats: { value: "4+", label: "apps delivered" },
   },
   {
     number: "03",
-    title: "Multi-Agent Orchestration",
-    description: "Coordinate teams of specialized agents. They communicate, delegate, and collaborate to solve complex problems together.",
-    stats: { value: "1000x", label: "parallel execution" },
+    title: "UI/UX Design",
+    description: "Designing intuitive interfaces that users love. Clean aesthetics combined with functional design principles.",
+    stats: { value: "100%", label: "client satisfaction" },
   },
   {
     number: "04",
-    title: "Secure Sandboxing",
-    description: "Each agent runs in isolated environments. Full audit trails, encrypted execution, and zero data leakage between tasks.",
-    stats: { value: "0", label: "data breaches" },
+    title: "Full-Stack Solutions",
+    description: "End-to-end development from database architecture to frontend polish. Complete solutions under one roof.",
+    stats: { value: "3+", label: "years experience" },
   },
 ];
 
@@ -165,16 +165,16 @@ export function FeaturesSection() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Intelligent
+                My
                 <br />
-                <span className="text-muted-foreground">workers.</span>
+                <span className="text-muted-foreground">skills.</span>
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.
+                Delivering high-quality web solutions with 3+ years of freelance experience. From concept to deployment, I handle it all.
               </p>
             </div>
           </div>
