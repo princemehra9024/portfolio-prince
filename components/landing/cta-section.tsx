@@ -51,35 +51,40 @@ export function CtaSection() {
               {/* Left content */}
               <div className="flex-1">
               <h2 className="text-6xl md:text-7xl lg:text-[72px] font-display tracking-tight mb-8 leading-[0.95]">
-                Ready to start
+                Let&apos;s work
                 <br />
-                your project?
+                together.
               </h2>
 
               <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                Let&apos;s discuss your vision and bring it to life. 
-                I&apos;m available for freelance projects and collaborations.
+                Ready to discuss your project? Reach out via email or phone.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Button
                   size="lg"
                   className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                  asChild
                 >
-                  Get in Touch
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  <a href="mailto:princemehra9024@gmail.com">
+                    Email Me
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                  asChild
                 >
-                  View My Work
+                  <a href="tel:+919024546041">
+                    Call: 9024546041
+                  </a>
                 </Button>
               </div>
 
               <p className="text-sm text-muted-foreground mt-8 font-mono">
-                Usually respond within 24 hours
+                princemehra9024@gmail.com
               </p>
               </div>
 

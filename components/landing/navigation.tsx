@@ -6,10 +6,9 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Skills",        href: "#features"      },
-  { name: "Process",       href: "#how-it-works"  },
+  { name: "Projects",      href: "#projects"      },
   { name: "Experience",    href: "#infra"          },
-  { name: "Work",          href: "#integrations"  },
-  { name: "About",         href: "#security"      },
+  { name: "About",         href: "#developers"    },
 ];
 
 export function Navigation() {
@@ -65,7 +64,7 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="mailto:prince@example.com" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
+            <a href="mailto:princemehra9024@gmail.com" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
               Contact
             </a>
             <Button

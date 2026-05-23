@@ -122,7 +122,7 @@ export function IntegrationsSection() {
         <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-100 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
-          Modern technologies and frameworks to build fast, scalable, and beautiful digital products.
+          Modern frameworks and tools for fast, scalable, and polished products.
         </p>
       </div>
 

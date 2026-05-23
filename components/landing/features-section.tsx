@@ -6,25 +6,25 @@ const features = [
   {
     number: "01",
     title: "Web Development",
-    description: "Building responsive, high-performance websites with modern frameworks. From landing pages to complex web applications.",
+    description: "Responsive, high-performance websites. Landing pages to complex web applications.",
     stats: { value: "50+", label: "websites built" },
   },
   {
     number: "02",
     title: "App Development",
-    description: "Creating mobile and web applications with seamless user experiences. Cross-platform solutions that work everywhere.",
+    description: "Mobile and web applications with seamless user experiences.",
     stats: { value: "4+", label: "apps delivered" },
   },
   {
     number: "03",
     title: "UI/UX Design",
-    description: "Designing intuitive interfaces that users love. Clean aesthetics combined with functional design principles.",
+    description: "Intuitive interfaces with clean aesthetics and functional design.",
     stats: { value: "100%", label: "client satisfaction" },
   },
   {
     number: "04",
     title: "Full-Stack Solutions",
-    description: "End-to-end development from database architecture to frontend polish. Complete solutions under one roof.",
+    description: "End-to-end development from database to frontend.",
     stats: { value: "3+", label: "years experience" },
   },
 ];
@@ -174,7 +174,7 @@ export function FeaturesSection() {
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Delivering high-quality web solutions with 3+ years of freelance experience. From concept to deployment, I handle it all.
+                3+ years of freelance experience. 50+ websites. 4+ apps. From concept to deployment.
               </p>
             </div>
           </div>

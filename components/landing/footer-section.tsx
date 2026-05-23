@@ -8,30 +8,25 @@ const footerLinks = {
     { name: "Web Development", href: "#features" },
     { name: "App Development", href: "#features" },
     { name: "UI/UX Design", href: "#features" },
-    { name: "Consulting", href: "#pricing" },
   ],
   About: [
     { name: "Background", href: "#developers" },
     { name: "Experience", href: "#infra" },
     { name: "Tech Stack", href: "#integrations" },
-    { name: "Process", href: "#how-it-works" },
+    { name: "Projects", href: "#projects" },
   ],
-  Connect: [
-    { name: "Email", href: "mailto:prince@example.com" },
+  Contact: [
+    { name: "princemehra9024@gmail.com", href: "mailto:princemehra9024@gmail.com" },
+    { name: "+91 9024546041", href: "tel:+919024546041" },
     { name: "LinkedIn", href: "#" },
     { name: "GitHub", href: "#" },
-    { name: "Twitter", href: "#" },
-  ],
-  Legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
   ],
 };
 
 const socialLinks = [
+  { name: "Email", href: "mailto:princemehra9024@gmail.com" },
+  { name: "Phone", href: "tel:+919024546041" },
   { name: "LinkedIn", href: "#" },
-  { name: "GitHub", href: "#" },
-  { name: "Twitter", href: "#" },
 ];
 
 function AnimatedWaveCanvas() {
@@ -118,8 +113,13 @@ export function FooterSection() {
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                Web developer and IMCA student with 3+ years of freelance experience. Building digital solutions that make a difference.
+                Web Developer | IMCA Student | 3+ Years Freelancing
               </p>
+
+              <div className="text-sm text-white/40 mb-6 space-y-1">
+                <p>princemehra9024@gmail.com</p>
+                <p>+91 9024546041</p>
+              </div>
 
               {/* Social Links */}
               <div className="flex gap-6">

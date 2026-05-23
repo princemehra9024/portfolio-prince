@@ -5,19 +5,19 @@ import { useState, useEffect, useRef } from "react";
 const features = [
   { 
     title: "IMCA Student", 
-    description: "Pursuing Integrated Master of Computer Applications."
+    description: "Integrated Master of Computer Applications"
   },
   { 
     title: "3+ Years Freelancing", 
-    description: "Building real solutions for real businesses."
+    description: "Building solutions for businesses"
   },
   { 
     title: "50+ Websites", 
-    description: "From landing pages to complex web applications."
+    description: "Landing pages to web applications"
   },
   { 
     title: "4+ Apps", 
-    description: "Mobile and web applications delivered."
+    description: "Mobile and web applications"
   },
 ];
 
@@ -84,8 +84,7 @@ export function DevelopersSection() {
           }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            A passionate web developer currently pursuing IMCA. I turn ideas into 
-            reality through clean code and modern design.
+            Web developer pursuing IMCA. Clean code, modern design, real results.
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (
