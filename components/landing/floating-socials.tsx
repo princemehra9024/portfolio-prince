@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Github, Linkedin, Globe, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Globe, Mail, ExternalLink, Instagram } from "lucide-react";
 
 const links = [
   {
@@ -19,18 +19,11 @@ const links = [
     glow: "#ff2d87",
   },
   {
-    label: "Wwwwards",
-    sublabel: "Member Profile",
-    href: "https://wwwwards.com",
-    icon: Globe,
-    glow: "#e040fb",
-  },
-  {
-    label: "Aryan Heights",
-    sublabel: "Live Project",
-    href: "https://www.aryanheights.in/",
-    icon: ExternalLink,
-    glow: "#ff85c1",
+    label: "Instagram",
+    sublabel: "Executive Plans",
+    href: "https://www.instagram.com/executive.plans?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    icon: Instagram,
+    glow: "#E1306C",
   },
   {
     label: "Email",

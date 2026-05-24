@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, Linkedin, Globe } from "lucide-react";
+import { Menu, X, Github, Linkedin, Globe, Instagram } from "lucide-react";
 
 const navLinks = [
   { name: "Skills",        href: "#features"      },
@@ -148,8 +148,8 @@ export function Navigation() {
             <a href="https://www.linkedin.com/in/prince-mehra-562681366" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
               <Linkedin className="w-5 h-5" /><span className="text-sm">LinkedIn</span>
             </a>
-            <a href="https://wwwwards.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
-              <Globe className="w-5 h-5" /><span className="text-sm">Wwwwards</span>
+            <a href="https://www.instagram.com/executive.plans?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors">
+              <Instagram className="w-5 h-5" /><span className="text-sm">Instagram</span>
             </a>
           </div>
 

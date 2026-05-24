@@ -28,7 +28,7 @@ const socialLinks = [
   { name: "Email", href: "mailto:princemehra9024@gmail.com", icon: "email" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/prince-mehra-562681366", icon: "linkedin" },
   { name: "GitHub", href: "https://github.com/princemehra9024", icon: "github" },
-  { name: "Wwwwards", href: "https://wwwwards.com", icon: "globe" },
+
 ];
 
 function AnimatedWaveCanvas() {
@@ -105,45 +105,6 @@ export function FooterSection() {
 
       {/* Footer content — black background, white text */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
-        {/* Live Projects Banner */}
-        <div className="pt-10 pb-8 border-b border-white/10">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <span className="text-xs font-mono text-white/40 uppercase tracking-widest">Featured Live Work</span>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="https://www.aryanheights.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-sm text-white/60 hover:text-white hover:border-white/50 transition-all duration-300 group"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff6eb4] animate-pulse" />
-                Aryan Heights
-                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
-              <a
-                href="https://www.shreekalyaanhospital.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-sm text-white/60 hover:text-white hover:border-white/50 transition-all duration-300 group"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff6eb4] animate-pulse" />
-                Shree Kalyaan Hospital
-                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
-              <a
-                href="https://github.com/princemehra9024"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-mono transition-all duration-300"
-                style={{ borderColor: "rgba(255,110,180,0.4)", background: "rgba(255,110,180,0.06)", color: "#ff6eb4" }}
-              >
-                <Github className="w-3.5 h-3.5" />
-                View GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Main Footer */}
         <div className="py-12 lg:py-16">
           <div className="grid grid-cols-2 md:grid-cols-6 gap-10 lg:gap-8">

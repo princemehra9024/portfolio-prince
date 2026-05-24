@@ -219,7 +219,6 @@ export function HeroSection() {
           {[
             { label: "GitHub", href: "https://github.com/princemehra9024", icon: Github },
             { label: "LinkedIn", href: "https://www.linkedin.com/in/prince-mehra-562681366", icon: Linkedin },
-            { label: "Aryan Heights", href: "https://www.aryanheights.in/", icon: Globe },
           ].map(({ label, href, icon: Icon }) => (
             <a
               key={label}
