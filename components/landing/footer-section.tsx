@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight, Github, Linkedin, Globe } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const footerLinks = {
   Services: [
@@ -85,6 +85,103 @@ function AnimatedWaveCanvas() {
   }, []);
 
   return <canvas ref={canvasRef} className="w-full h-full" />;
+}
+
+const catMessages = [
+  "Building websites isn't my job. It's how I solve business problems.",
+  "I turn ideas into products people actually use.",
+  "From design to deployment, I handle the complete development journey.",
+  "Every project starts with understanding the business, not writing code.",
+  "Clean code today means fewer problems tomorrow.",
+  "Founder of Executive Plans — helping businesses grow through technology.",
+  "I build websites, apps, automations, and digital systems that scale.",
+  "My goal is simple: create digital experiences that generate results.",
+  "Technology should save time, increase revenue, and simplify work.",
+  "Currently exploring advanced system design and scalable architectures.",
+  "Every day I learn something new and apply it to real projects.",
+  "Curiosity is my favorite development tool.",
+  "The best developers never stop being students.",
+  "Fun Fact: I enjoy solving coding challenges more than watching movies.",
+  "Fun Fact: I often redesign projects multiple times before launch.",
+  "Fun Fact: Most of my ideas come while debugging.",
+  "Fun Fact: I started with simple websites and now build complete solutions.",
+  "I focus on solutions, not excuses.",
+  "Good design attracts users. Great development keeps them.",
+  "Details matter. That's where quality lives.",
+  "Fast websites create better user experiences.",
+  "I enjoy building browser games to experiment with new ideas.",
+  "Creating interactive experiences is one of my favorite challenges.",
+  "I love turning complex concepts into simple user experiences.",
+  "Outside client work, I explore AI, automation, and web technologies.",
+  "Based in India, working with clients worldwide.",
+  "I believe consistency beats motivation.",
+  "I enjoy transforming ideas into products that create impact.",
+  "Building, learning, and improving — that's the routine.",
+  "Meow! Prince is probably debugging something right now.",
+  "I inspected the code. Approved. 🐾",
+  "Current status: Turning coffee into code.",
+  "Warning: Developer may suddenly get new project ideas.",
+  "This human spends too much time improving pixels.",
+  "Meow! Ask him about web development, not about sleep schedules.",
+];
+
+function InteractiveCat() {
+  const [messageIndex, setMessageIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setMessageIndex(Math.floor(Math.random() * catMessages.length));
+    
+    // Initial delay before first message shows
+    const initialTimeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000);
+
+    const runCycle = () => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setMessageIndex((prev) => (prev + Math.floor(Math.random() * 5) + 1) % catMessages.length);
+        setIsVisible(true);
+      }, 3500); // 3.5 second gap
+    };
+
+    // Cycle every 11.5 seconds (8s visible + 3.5s gap)
+    const intervalId = setInterval(runCycle, 11500);
+
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  return (
+    <div className="absolute bottom-full right-0 md:right-4 z-20 flex flex-col items-end">
+      {/* Tooltip positioned to the left of the cat */}
+      <div 
+        className={`absolute top-1/2 right-full mr-4 md:mr-6 -translate-y-1/2 pointer-events-none transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      >
+        <div className="relative w-max max-w-[220px] md:max-w-[300px] bg-black/90 backdrop-blur-md border border-[#ff6eb4]/40 rounded-2xl p-4 shadow-[0_0_20px_rgba(255,110,180,0.15)]">
+          <p className="text-xs md:text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 leading-relaxed font-medium">
+            {catMessages[messageIndex]}
+          </p>
+          <div className="absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden pointer-events-none">
+            <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#ff6eb4]/10 to-transparent blur-xl"></div>
+          </div>
+          {/* Tail */}
+          <div 
+            className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 bg-black border-t border-r rotate-45 border-[#ff6eb4]/40 transform"
+          ></div>
+        </div>
+      </div>
+
+      {/* Cat Image */}
+      <img 
+        src="/images/lucky-cat-transparent.png" 
+        alt="Lucky Cat" 
+        className="w-32 h-32 md:w-48 md:h-48 object-contain translate-y-4 md:translate-y-6 drop-shadow-[0_0_15px_rgba(255,110,180,0.2)] hover:scale-105 transition-transform duration-300 origin-bottom"
+      />
+    </div>
+  );
 }
 
 export function FooterSection() {
@@ -171,12 +268,8 @@ export function FooterSection() {
 
         {/* Bottom Bar with Signature */}
         <div className="relative py-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Lucky Cat Image sitting on the horizontal line */}
-          <img 
-            src="/images/lucky-cat-transparent.png" 
-            alt="Lucky Cat" 
-            className="absolute bottom-full right-0 md:right-4 w-24 h-24 md:w-32 md:h-32 object-contain translate-y-3 pointer-events-none z-10 drop-shadow-lg"
-          />
+          {/* Interactive Lucky Cat */}
+          <InteractiveCat />
 
           <p className="text-sm text-white/30">
             &copy; 2025 Executive Plans. All rights reserved.
