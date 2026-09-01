@@ -105,11 +105,11 @@ export function FloatingSocials() {
               {/* Pulse ring */}
               {isPulse && (
                 <span
-                  className="absolute inset-0 rounded-full animate-ping"
+                  className="absolute inset-0 rounded-full"
                   style={{
-                    border: `1px solid ${link.glow}`,
-                    opacity: 0.4,
-                    animationDuration: "1.2s",
+                    border: `1.5px solid ${link.glow}`,
+                    opacity: 0,
+                    animation: "pulse-premium 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
                   }}
                 />
               )}

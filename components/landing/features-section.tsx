@@ -161,7 +161,7 @@ export function FeaturesSection() {
                 Capabilities
               </span>
               <h2
-                className={`text-6xl md:text-7xl lg:text-[100px] font-display tracking-tight leading-none transition-all duration-1000 ${
+                className={`text-6xl md:text-7xl lg:text-[100px] font-display tracking-tight leading-none transition-all duration-1000 ease-smooth delay-100 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -171,7 +171,7 @@ export function FeaturesSection() {
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-6">
-              <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
+              <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ease-smooth ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
                 3+ years of freelance experience. 50+ websites. 4+ apps. From concept to deployment.
@@ -184,7 +184,7 @@ export function FeaturesSection() {
         <div className="grid lg:grid-cols-12 gap-4 lg:gap-6">
           {/* Large feature card */}
           <div 
-            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[500px] overflow-hidden group transition-all duration-700 flex ${
+            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[500px] overflow-hidden group transition-all duration-1000 ease-smooth delay-300 flex ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
             onMouseEnter={() => setActiveFeature(0)}

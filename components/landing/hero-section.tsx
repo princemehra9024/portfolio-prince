@@ -183,7 +183,7 @@ export function HeroSection() {
         <div className="lg:max-w-[55%]">
         {/* Eyebrow */}
         <div 
-          className={`mb-8 transition-all duration-700 ${
+          className={`mb-8 transition-all duration-1000 ease-smooth ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -196,7 +196,7 @@ export function HeroSection() {
         {/* Main headline */}
         <div className="mb-12">
           <h1 
-            className={`text-left text-[clamp(2rem,6vw,7rem)] font-display leading-[0.92] tracking-tight text-white transition-all duration-1000 ${
+            className={`text-left text-[clamp(2rem,6vw,7rem)] font-display leading-[0.92] tracking-tight text-white transition-all duration-1000 delay-150 ease-smooth ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -212,7 +212,7 @@ export function HeroSection() {
 
         {/* Social Links Row */}
         <div
-          className={`flex flex-wrap items-center gap-4 mt-10 transition-all duration-700 delay-300 ${
+          className={`flex flex-wrap items-center gap-4 mt-10 transition-all duration-1000 delay-300 ease-smooth ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -257,7 +257,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-700 delay-700 ${
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-700 ease-smooth ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}>
         <span className="text-xs font-mono text-white/30 tracking-widest uppercase">Scroll</span>
@@ -266,8 +266,8 @@ export function HeroSection() {
 
       {/* Stats — 3 metrics static, no auto-scroll */}
       <div 
-        className={`absolute bottom-12 left-0 right-0 px-6 lg:px-12 transition-all duration-700 delay-500 ${
-          isVisible ? "opacity-100" : "opacity-0"
+        className={`absolute bottom-12 left-0 right-0 px-6 lg:px-12 transition-all duration-1000 delay-500 ease-smooth ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
         <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">

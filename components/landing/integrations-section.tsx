@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { Jhumar } from "@/components/landing/jhumar";
 
 const logos: Record<string, React.ReactNode> = {
   OpenAI: (
@@ -103,7 +104,7 @@ export function IntegrationsSection() {
 
       {/* Header — centré verticalement sur l'image */}
       <div className="relative z-10 pt-32 lg:pt-40 text-center">
-        <span className={`inline-flex items-center gap-4 text-sm font-mono text-muted-foreground mb-8 transition-all duration-700 justify-center ${
+        <span className={`inline-flex items-center gap-4 text-sm font-mono text-muted-foreground mb-8 transition-all duration-1000 ease-smooth justify-center ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           <span className="w-12 h-px bg-foreground/20" />
@@ -111,7 +112,7 @@ export function IntegrationsSection() {
           <span className="w-12 h-px bg-foreground/20" />
         </span>
 
-        <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
+        <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 delay-150 ease-smooth ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
           Tools I
@@ -119,7 +120,7 @@ export function IntegrationsSection() {
           <span className="text-muted-foreground">work with.</span>
         </h2>
 
-        <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-100 ${
+        <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-300 ease-smooth ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           Modern frameworks and tools for fast, scalable, and polished products.
@@ -127,7 +128,7 @@ export function IntegrationsSection() {
       </div>
 
       {/* Full-width image */}
-      <div className={`relative left-1/2 -translate-x-1/2 w-screen -mt-16 transition-all duration-1000 delay-200 ${
+      <div className={`relative left-1/2 -translate-x-1/2 w-screen -mt-16 transition-all duration-1000 delay-500 ease-smooth ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}>
         <img
@@ -144,7 +145,7 @@ export function IntegrationsSection() {
           {integrations.map((integration, index) => (
             <div
               key={integration.name}
-              className={`group relative overflow-hidden p-6 lg:p-8 border transition-all duration-500 cursor-default ${
+              className={`group relative overflow-hidden p-6 lg:p-8 border transition-all duration-700 ease-smooth cursor-default ${
                 hoveredIndex === index
                   ? "border-foreground bg-foreground/[0.04] scale-[1.02]"
                   : "border-foreground/10 hover:border-foreground/30"
@@ -205,8 +206,8 @@ export function IntegrationsSection() {
         </div>
 
         {/* Bottom stats row */}
-        <div className={`flex flex-wrap items-center justify-between gap-8 pt-12 border-t border-foreground/10 transition-all duration-1000 delay-500 pb-32 lg:pb-40 ${
-          isVisible ? "opacity-100" : "opacity-0"
+        <div className={`flex flex-wrap items-center justify-between gap-8 pt-12 border-t border-foreground/10 transition-all duration-1000 delay-700 ease-smooth pb-32 lg:pb-40 relative ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}>
           <div className="flex flex-wrap gap-12">
             {[
@@ -221,10 +222,13 @@ export function IntegrationsSection() {
             ))}
           </div>
 
-          <a href="#features" className="group inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#features" className="group inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors z-10">
             View all skills
             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
+
+          {/* Animated Lantern placed next to "View all skills" */}
+          <Jhumar className="absolute -left-8 md:-left-16 lg:-left-24 top-0 z-0 opacity-80 pointer-events-none scale-75 origin-top" />
         </div>
       </div>
     </section>
